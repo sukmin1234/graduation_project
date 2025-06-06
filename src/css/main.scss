@@ -22,12 +22,14 @@ section{
         outline: none;
         border-radius: 8px;
         background-color: #222;
+        
         >.recommendation{
+            display: block;
             color: white;
             width: 100%;
             height: 100%;
-            font-size: 18px;
-           
+            font-size: 16px;
+           line-height: 60px;
            
         }
 
@@ -58,16 +60,22 @@ section{
         
             >div{
                 margin-top: 20px;
-                a{
-                    width: 100%;
-                    height: 100%;
+                .link{
+                    width: 75px;
+                    height: 75px;
                     display: block; 
                     cursor: pointer;
+                    border-radius: 9px;
+                    padding: 5px;
                         >img{
                             display: block;
-                            width: 75px;
-                            height: 75px;
+                            width: 100%;
+                            height: 100%;
                         }
+                        transition: background-color 0.3s ease;
+                    }
+                    a:hover{
+                        background-color: #e0e0e0;
                     }
 
                     >p{
@@ -79,22 +87,26 @@ section{
            }
 
            >.categories_wrap_2{
-            padding: 10px;
-           
+        
             >div{
-               
-                margin-top: 10px;
+                margin-top: 20px;
                 a{
-                    height: 100%;
-                    width: 100%;
-                     display: block;
+                  
+                    width: 75px;
+                    height: 75px;
+                    display: block; 
                     cursor: pointer;
+                    border-radius: 9px;
+                    padding: 5px;
                         >img{
                             display: block;
-                            width: 75px;
-                            height: 75px;
-                            margin-top: 5px;
+                            width: 100%;
+                            height: 100%;
                         }
+                        transition: background-color 0.3s ease;
+                    }
+                    a:hover{
+                        background-color: #e0e0e0;
                     }
 
                     >p{
@@ -102,26 +114,44 @@ section{
                         font-size: 20px;
                         margin-top: 10px;
                     }
-            }
-           
-        }
+                }
+           }
 
         a{
             display: block;
             padding: 10px;
             padding-left: 0;
+            
+           
             >div{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                border-radius: 8px;
                 >img{
-                    
+                
                     display: block;
                     width: 500px;
+                    height: 100%;
+                    border-radius: 8px;
                     margin-top: 10px;
-                   border-radius: 8px;
-
+                  
                 }
+                span{
+                    position: absolute;
+                    top: 0;
+                    font-size: 30px;
+                    margin-top: 30px;
+                    padding: 30px;
+                    color: #fff;
+                    font-weight: 800;
+                }
+
+               
             }
         }
 
 
     }
 }
+

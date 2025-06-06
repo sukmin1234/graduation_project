@@ -1,13 +1,14 @@
 @charset "UTF-8";
 
-body{
-    padding-bottom: 1300px; // footer가리지 않기
-}
+// body{
+//     padding-bottom: 1000px; // footer가리지 않기
+// }
 .wrap{
     width: 800px;
     margin: 0 auto;
     //border: 1px solid #000;
-
+    padding-bottom: 130px;
+      
 }
 
 // 공용
