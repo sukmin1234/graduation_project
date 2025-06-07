@@ -14,7 +14,16 @@ import nigiri from '../../images/icon/nigiri.png'
 import korean from '../../images/coupon/한식 쿠폰.jpg'
 import css from '../../css/popular_spot.scss'
 import Popular_spot_list from "../공용/4.list/Popular_spot_list";
+import { useState } from "react";
+import Store from "../2.menu/Store";
+
+
 function Popular_spot(){
+    const [storeName,setStoreName] = useState(['가게1','가게2'])
+
+    const [storeList, setStoreList] = useState([]);
+     // 크롤링 데이터 여기에 저장하고 storeName.map 대신 storeList.map 해서 데이터 추출하면 됨
+
     return(
         <div className="pop_wrap">
             <Header/>
@@ -29,49 +38,49 @@ function Popular_spot(){
                 
                 <ul>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=한식">
                             <img src={bibimbap}></img>
                             <p>한식</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=중식">
                             <img src={dumpling}></img>
                             <p>중식</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag"> 
+                        <Link className="link_tag" to="/cuisine?category=양식"> 
                             <img src={pizza}></img>
                             <p>양식</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=치킨">
                             <img src={chicken}></img>
                             <p>치킨</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=고기">
                             <img src={meat}></img>
                             <p>고기</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=탕">
                             <img src={sundae}></img>
                             <p>탕</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=분식">
                             <img src={tteokbokki}></img>
                             <p>분식</p>
                         </Link>
                     </li>
                     <li>                      
-                        <Link className="link_tag">
+                        <Link className="link_tag" to="/cuisine?category=일식">
                             <img src={nigiri}></img>
                             <p>일식</p>
                         </Link>
@@ -83,9 +92,9 @@ function Popular_spot(){
                 <h1>오늘의 맛집</h1>
 
                 <div className="flex_wrap">
-                    <Popular_spot_list/>
-                    <Popular_spot_list/>
-                    <Popular_spot_list/>
+                    {storeName.map((store, index) => (
+                        <Popular_spot_list key={index} storeName={store} />
+                    ))}
                 </div>
             </section>
             <Footer/>

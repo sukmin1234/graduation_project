@@ -10,6 +10,8 @@ import Main from './components/Main'
 import Popular_spot from './components/popular/Popular_spot';
 import Popular_spot_list from './components/공용/4.list/Popular_spot_list';
 import ScrollTop from './components/공용/ScrollTop';
+import Cafe from './components/2.menu/Store';
+import Store from './components/2.menu/Store';
 function App() {
   return (
     <div className="wrap">
@@ -21,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/store" element={<Popular_spot />} />
+          <Route path="/cuisine" element={<Store />} />
         </Routes>
       
     

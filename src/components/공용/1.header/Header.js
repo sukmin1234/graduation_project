@@ -1,14 +1,16 @@
 import logo from '../../../images/logo/로고.png';
 import css from '../../../css/style.scss'
+import { Link } from 'react-router-dom';
 
 function Header(){
     return(
         <header>
-            <div class='header-wrap'>
+           
+            <Link to = '/' className='header-wrap'>
                 <img src={logo} alt="로고" />
-
                 <p>오늘 뭐할까?</p>
-            </div>
+            </Link>
+            
         </header>
     )
 }

@@ -45,7 +45,7 @@ function Main(){
                         <div className='categories_wrap_2'>
                             <div>
                                 {/* <a><img src={coffee}></img></a> */}
-                                <Link to="cafe" className='link'><img src={coffee}></img></Link>
+                                <Link to="/cuisine?category=카페" className='link'><img src={coffee}></img></Link>
                                 <p>카페</p>
                             </div>
 

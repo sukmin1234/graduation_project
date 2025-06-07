@@ -9,7 +9,7 @@ function ImageHover({ defaultImg, hoverImg, label }) {
 
   return (
     <li className="footer-wrap">
-      <a href="#"
+      <a href="/"
       //mouse 이벤트
          onMouseEnter={() => setHovered(true)}
          onMouseLeave={() => setHovered(false)}>
